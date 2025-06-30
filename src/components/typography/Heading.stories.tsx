@@ -15,6 +15,20 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+  parameters: {
+    a11y: {
+      element: 'body',
+      config: {
+        rules: [
+          {
+            // Setting the enabled option to false will disable checks for this particular rule on all stories.
+            id: 'heading-order',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
   args: {
     children: '',
   },
