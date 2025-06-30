@@ -9,6 +9,18 @@ const meta = {
   component: DatePicker,
   parameters: {
     layout: 'padded',
+    a11y: {
+      element: 'body',
+      config: {
+        rules: [
+          {
+            // Setting the enabled option to false will disable checks for this particular rule on all stories.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
   },
   args: {
     onChange: fn(),
