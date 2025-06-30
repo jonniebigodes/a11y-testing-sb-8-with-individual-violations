@@ -27,6 +27,23 @@ const breakpointViewports = Object.keys(breakpoints).reduce(
 
 const preview: Preview = {
   parameters: {
+     a11y: {
+      element: 'body',
+      config: {
+        rules: [
+          {
+            // Setting the enabled option to false will disable checks for this particular rule on all stories.
+            id: 'landmark-no-duplicate-banner',
+            enabled: false,
+          },
+          {
+            // Setting the enabled option to false will disable checks for this particular rule on all stories.
+            id: 'landmark-unique',
+            enabled: false,
+          },
+        ],
+      },
+    },
     viewport: {
       viewports: {
         ...breakpointViewports,
